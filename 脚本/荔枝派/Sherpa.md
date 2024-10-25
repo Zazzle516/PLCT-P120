@@ -227,7 +227,7 @@ cd 96/
 --decoder=./decoder-epoch-99-avg-1.onnx
 --joiner=./joiner-epoch-99-avg-1.int8.onnx
 --tokens=./tokens.txt
---num-threads=3
+--num-threads=4
 ../test_wavs/0.wav
 ```
 
@@ -256,7 +256,19 @@ card 0: LightSoundCard [Light-Sound-Card], device 1: light-i2s-dai-ES7210 ADC 0 
 --decoder=./decoder-epoch-99-avg-1.onnx
 --joiner=./joiner-epoch-99-avg-1.int8.onnx
 --tokens=./tokens.txt
---num-threads=3
+--num-threads=4
 plughw:0,1
+```
+
+
+
+```
+../sherpa-onnx-alsa --encoder=./encoder-epoch-99-avg-1.int8.onnx --decoder=./decoder-epoch-99-avg-1.onnx --joiner=./joiner-epoch-99-avg-1.int8.onnx --tokens=./tokens.txt --num-threads=4 plughw:0,1
+```
+
+
+
+```
+sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16/
 ```
 
